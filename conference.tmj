@@ -263,29 +263,6 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "class":"area",
-                 "height":320,
-                 "id":18,
-                 "name":"jitsiConference",
-                 "properties":[
-                        {
-                         "name":"jitsiRoom",
-                         "type":"string",
-                         "value":"Conference"
-                        }, 
-                        {
-                         "name":"jitsiTrigger",
-                         "type":"string",
-                         "value":"onaction"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":219.090909090909,
-                 "x":32,
-                 "y":96
-                }, 
-                {
-                 "class":"area",
                  "height":71.612250966399,
                  "id":19,
                  "name":"website",
@@ -311,13 +288,13 @@
                          "value":"Press SPACE or touch here to open a custom website"
                         }],
                  "rotation":0,
+                 "type":"area",
                  "visible":true,
                  "width":96,
                  "x":256,
                  "y":96
                 }, 
                 {
-                 "class":"area",
                  "height":96,
                  "id":22,
                  "name":"to-office",
@@ -328,13 +305,13 @@
                          "value":"map.tmj#from-conference"
                         }],
                  "rotation":0,
+                 "type":"area",
                  "visible":true,
                  "width":96,
                  "x":608,
                  "y":0
                 }, 
                 {
-                 "class":"area",
                  "height":32,
                  "id":23,
                  "name":"from-office",
@@ -345,10 +322,55 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"area",
                  "visible":true,
                  "width":32,
                  "x":640,
                  "y":128
+                }, 
+                {
+                 "height":87.3333333333333,
+                 "id":24,
+                 "name":"jitsiMeetingRoom",
+                 "properties":[
+                        {
+                         "name":"jitsiRoom",
+                         "type":"string",
+                         "value":"Stage"
+                        }, 
+                        {
+                         "name":"jitsiTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":116.666666666667,
+                 "x":87.3333333333333,
+                 "y":96
+                }, 
+                {
+                 "height":220.945633333333,
+                 "id":25,
+                 "name":"liveWebsite",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"{{{ liveURL }}}"
+                        }, 
+                        {
+                         "name":"openWebsitePolicy",
+                         "type":"string",
+                         "value":"fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":224,
+                 "x":32,
+                 "y":198.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -362,7 +384,6 @@
          "name":"configuration",
          "objects":[
                 {
-                 "class":"variable",
                  "height":0,
                  "id":20,
                  "name":"websiteURL",
@@ -389,10 +410,44 @@
                          "value":false
                         }],
                  "rotation":0,
+                 "type":"variable",
                  "visible":true,
                  "width":0,
                  "x":304.52245019328,
                  "y":62.873476063039
+                }, 
+                {
+                 "height":0,
+                 "id":26,
+                 "name":"liveURL",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"https:\/\/workadventu.re\/"
+                        }, 
+                        {
+                         "name":"description",
+                         "type":"string",
+                         "value":"Test the website to embed with an iframe tester like https:\/\/iframetester.com\/"
+                        }, 
+                        {
+                         "name":"label",
+                         "type":"string",
+                         "value":"Live URL"
+                        }, 
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":54.6666666666666,
+                 "y":185.333333333333
                 }],
          "opacity":1,
          "properties":[
@@ -467,7 +522,7 @@
          "y":0
         }],
  "nextlayerid":62,
- "nextobjectid":24,
+ "nextobjectid":27,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -496,7 +551,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.9.2",
+ "tiledversion":"1.10.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -641,6 +696,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.9",
+ "version":"1.10",
  "width":24
 }
